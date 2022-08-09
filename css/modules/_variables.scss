@@ -1,0 +1,33 @@
+
+// Variables
+
+//Colour
+$pink: #fd69a5;
+$orange: #ffdfae;
+$purple: #ca6cc4;
+$blue: #00dee1;
+$green: #5fcc6f;
+$background-pink: #fff4f9;
+
+//Fonts
+$mainfont: 'Monoton', cursive;
+$secondfont: 'Lato', sans-serif;
+
+@mixin heading {
+  font-family: $mainfont;
+  font-weight: 400;
+}
+
+@mixin button-style {
+  cursor: pointer;
+  background-color: $pink;
+  display: flex;
+  width: max-content;
+  align-items: center;
+  box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.25);
+  font-family: $secondfont;
+  padding: 20px 20px;
+  border-radius: 10px;
+  user-select: none;
+  transition: all 0.3s ease;
+}

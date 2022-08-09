@@ -1,0 +1,139 @@
+
+#hero {
+  text-align: center;
+  background-color: $background-pink;
+  background-image: url(../img/bbblurry.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding: 50px 20px 30px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h1 {
+    text-shadow: 2px 3px 6px #fff4f9;
+    @include heading;
+    font-size: 60px;
+    margin-top: 170px;
+    z-index: 5;
+  }
+  h2 {
+    font-family: $secondfont;
+    font-weight: 300;
+    font-size: 20px;
+    z-index: 4;
+    margin-top: 200px;
+  }
+  .blob-shape {
+    z-index: 1;
+    position: absolute;
+    -webkit-animation: rotation 5s infinite linear;
+    }
+
+   @-webkit-keyframes rotation {
+    from {  -webkit-transform: rotate(0deg);
+   }
+   to {    -webkit-transform: rotate(359deg);
+   }
+  }
+  #purple-shape {
+    top: 23vh;
+    right: 8vw;
+    width: 43vw;
+    transition: transform 5s ease-in-out;
+  }
+  #pink-shape {
+    top: 41vh;
+    right: 23vw;
+    width: 46vw;
+    transform: rotate(45deg);
+    transition: transform 5s ease-in-out;
+  }
+  #orange-shape {
+    top: 22vh;
+    right: 57vw;
+    width: 33vw;
+    transform: rotate(247deg);
+    transition: transform 5s ease-in-out;
+  }
+}
+
+#scroll-button {
+  margin-top: 20px;
+  z-index: 3;
+  width: 80px;
+  height: 80px;
+  background-color: $pink;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.25);
+  i {
+    font-size: 50px;
+    margin-top: 5px;
+    transition: all 0.3s ease;
+  }
+}
+
+#scroll-button:hover {
+  cursor: pointer;
+  i {
+    color: $background-pink;
+  }
+}
+
+@media only screen and (min-width: 650px) {
+
+}
+
+@media only screen and (min-width: 768px) {
+  #hero {
+    #purple-shape {
+      top: 10vh;
+      right: 12vw;
+      width: 36vw;
+    }
+    #pink-shape {
+      top: 30vh;
+      right: 35vw;
+      width: 31vw;
+    }
+    #orange-shape {
+      top: 9vh;
+      right: 60vw;
+      width: 26vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #hero {
+    h1 {
+      font-size: 90px;
+      margin-top: 90px;
+    }
+    #purple-shape {
+      top: 23vh;
+      right: 14vw;
+      width: 33vw;
+    }
+    #pink-shape {
+      top: 50vh;
+      right: 34vw;
+      width: 31vw;
+    }
+    #orange-shape {
+      top: 22vh;
+      right: 61vw;
+      width: 21vw;
+    }
+  }
+  #hero {
+    padding: 300px 200px 120px;
+    #orange-shape:hover, #pink-shape:hover, #purple-shape:hover {
+      transform: rotate(2000deg);
+      cursor: pointer;
+    }
+  }
+}

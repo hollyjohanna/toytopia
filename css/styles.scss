@@ -1,0 +1,105 @@
+@import 'modules/variables';
+@import 'modules/hero';
+@import 'modules/toyprofile';
+@import 'modules/toymodal';
+@import 'modules/footer';
+@import 'modules/toolbar';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: #ffffff00;
+  margin-bottom: -40px;
+  align-items: center;
+  position: fixed;
+  transition: all 0.3s ease;
+  z-index: 9;
+  #logo, #menu {
+    padding: 20px 30px;
+    color: black;
+    font-size: 50px;
+    text-decoration: none;
+    h2 {
+      @include heading;
+      font-size: 50px;
+    }
+  }
+  #cart {
+    padding: 20px 30px 20px 0;
+    color: black;
+    font-size: 50px;
+    text-decoration: none;
+  }
+}
+
+.scrolling-active {
+  background-color: #fff;
+  box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.5);
+}
+
+/* ------------------Filter Modal Overlay---------------------------- */
+
+#filter-modal {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  padding: 15px 0;
+  top:0;
+  left:-400px;
+  z-index: 10;
+  background-color: #fd69a582;
+  backdrop-filter: blur(5px);
+  opacity:0;
+  visibility: hidden;
+  overflow: scroll;
+  transition: all 0.5s ease;
+  #filter-close-button {
+    position: absolute;
+    top: 14px;
+    left: 68px;
+    color: white;
+    font-size: 40px;
+  }
+  #filter-close-button:hover {
+    cursor: pointer;
+    color: black;
+  }
+}
+
+#filter-modal.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+  left: -37px;
+}
+
+#filter-modal-header {
+  width: 100%;
+  font-size: 30px;
+}
+
+
+@media only screen and (min-width: 768px) {
+  #filter-modal.active {
+    left: -60px;
+  }
+  #filter-modal {
+    #filter-close-button {
+      left: 83px;
+    }
+  }
+  #filter-modal-header {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+
+}

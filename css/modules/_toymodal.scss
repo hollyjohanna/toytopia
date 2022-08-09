@@ -1,0 +1,153 @@
+
+#modal-overlay{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top:0;
+  left:2000px;
+  background-color: #fd69a582;
+  backdrop-filter: blur(5px);
+  opacity:0;
+  visibility: hidden;
+  overflow: scroll;
+  transition: all 0.5s ease;
+  #modal-content h2 {
+    font-size: 120px;
+    font-weight: 800;
+  }
+
+  #modal-content {
+    color: black;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3 ease;
+
+    #close-button {
+      transition: all 0.3s ease;
+    }
+
+    #close-button:hover {
+      cursor: pointer;
+      color: black;
+    }
+    .modal-content-wrapper {
+      background: white;
+      padding: 30px;
+      margin: 100px 30px 30px;
+      font-family: $secondfont;
+      box-shadow: 9px 8px 10px rgba(0, 0, 0, 0.25);
+      border-radius: 10px;
+      #modal-heading {
+        @include heading;
+        font-size: 30px;
+        margin-top: 10px;
+      }
+      .modal-img {
+        width: 90%;
+        display: block;
+        margin: auto;
+      }
+      #modal-main-text {
+        margin-top: 10px;
+        #price {
+          font-size: 30px;
+          margin-bottom: 10px;
+        }
+        .bi-star-fill {
+          margin: 0 3px;
+          font-size: 16px;
+        }
+        #description-text {
+          margin-top: 10px;
+        }
+      }
+      #modal-icons {
+        display: flex;
+        justify-content: space-evenly;
+        font-size: 30px;
+        margin: 20px;
+      }
+      .buy-button {
+        @include button-style;
+        margin: auto;
+      }
+      .buy-button:hover {
+        color: white;
+      }
+    }
+  }
+
+  #modal-content.active {
+    opacity: 1;
+  }
+
+  #modal-content .close-btn {
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+  }
+}
+
+#modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+  left: 0;
+}
+
+@media only screen and (min-width: 650px) {
+
+}
+@media only screen and (min-width: 768px) {
+  #modal-overlay {
+    #modal-content {
+      .modal-content-wrapper {
+        #modal-flex-container {
+          display: flex;
+          flex-direction: row;
+          margin-top: 40px;
+        }
+        #modal-main-text {
+          width: 48%;
+          margin: auto;
+          text-align: left;
+        }
+        .modal-img {
+          width: 43%;
+        }
+        .buy-button {
+          font-size: 20px;
+        }
+        #modal-icons {
+          justify-content: center;
+          i {
+            margin: 0 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #modal-overlay {
+    #modal-content {
+      .modal-content-wrapper {
+        #modal-main-text {
+          #description-text {
+            font-size: 20px;
+            margin-bottom: 30px;
+            margin-top: 30px;
+          }
+        }
+        #modal-heading {
+          font-size: 40px;
+        }
+        .modal-img {
+          width: 35%;
+        }
+      }
+    }
+  }
+}

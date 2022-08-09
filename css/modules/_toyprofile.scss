@@ -1,0 +1,72 @@
+#result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.toy-profile {
+  font-family: $secondfont;
+  border-radius: 10px;
+  background-color: $background-pink;
+  padding: 20px;
+  margin-bottom: 20px;
+  width: 80%;
+  transition: all 0.3s ease;
+  img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    object-fit: contain;
+    max-height: 280px;
+  }
+  .content-wrapper {
+    padding: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    h4 {
+      font-size: 30px;
+      margin-bottom: 5px;
+      @include heading;
+    }
+    h5 {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-bottom: 10px;
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .button {
+    @include button-style;
+    margin: auto;
+    i {
+      margin-left: 10px;
+    }
+  }
+  .button:hover {
+    color: white;
+  }
+  .button:hover i {
+    margin-left: 20px;
+  }
+}
+.toy-profile:hover {
+  background-color: $orange;
+}
+
+@media only screen and (min-width: 768px) {
+  #result {
+    justify-content: space-evenly;
+  }
+  .toy-profile {
+    width: 48%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .toy-profile {
+    width: 22%;
+  }
+}

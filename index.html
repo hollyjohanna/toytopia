@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Monoton&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Formative 2.2</title>
+  </head>
+  <body>
+    <nav id="nav-bar">
+      <a id="logo" href="#"><h2>T</h2></a>
+      <div class="right-nav">
+        <a id="menu" href="#"><i class="bi bi-list"></i></a>
+        <a id="cart" href="#"><i class="bi bi-cart"></i></a>
+      </div>
+    </nav>
+    <div id="hero">
+      <h1>Toytopia</h1>
+      <h2>Scroll to exlore our toy collection</h2>
+      <img class="blob-shape" id="purple-shape" src="img/purple-shape.svg" alt="A purple blob">
+      <img class="blob-shape" id="pink-shape" src="img/pink-shape.svg" alt="A purple blob">
+      <img class="blob-shape" id="orange-shape" src="img/orange-shape.svg" alt="A purple blob">
+      <div id="scroll-button">
+        <i class="bi bi-arrow-down-circle"></i>
+      </div>
+    </div>
+
+    <div class="main-content-container">
+      <h2>Welcome to Toytopia</h2>
+      <h3>Home of the largest range of toys for both kids and adults</h3>
+      <div class="toolbar">
+        <a id="filter-modal-button" class="button">Filter<i class="bi bi-arrow-right-circle"></i></a>
+        <div id="search-box">
+          <input type="text" id="search-input" placeholder="Search...">
+          <i id="search-button" class="bi bi-search-heart"></i>
+        </div>
+    </div>
+      <div id="filter-modal">
+        <i id="filter-close-button" class="close-btn bi bi-x-circle"></i>
+        <div id="checkbox-toolbar">
+          <h3 id="filter-modal-header">Filter Toys</h3>
+          <div id="filter-checkbox">
+            <form id="genre-form" action="">
+
+              <div class="checkbox-container">
+                <label for="toy-type">Soft Toys</label>
+                <input id="checkbox" type="checkbox" name="toy-type" value="soft">
+              </div>
+
+              <div class="checkbox-container">
+                <label for="toy-type">Puppet Toys</label>
+                <input id="checkbox" type="checkbox" name="toy-type" value="puppets">
+              </div>
+
+              <div class="checkbox-container">
+                <label for="toy-type">Games</label>
+                <input id="checkbox" type="checkbox" name="toy-type" value="games">
+              </div>
+
+              <div class="checkbox-container">
+                <label for="toy-type">Hard Toys</label>
+                <input id="checkbox" type="checkbox" name="toy-type" value="hard">
+              </div>
+
+              <a id="type-filter-button" class="button">Filter Toy Types<i class="bi bi-arrow-right-circle"></i></a>
+
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="search-box">
+        <input type="text" id="search-input" placeholder="Search...">
+        <i id="search-button" class="bi bi-search-heart"></i>
+      </div> -->
+      <!-- <div id="checkbox-toolbar">
+        <div id="filter-checkbox">
+          <form id="genre-form" action="">
+
+            <div>
+              <label for="toy-type">Soft Toys</label>
+              <input id="checkbox" type="checkbox" name="toy-type" value="soft">
+            </div>
+
+            <div>
+              <label for="toy-type">Puppet Toys</label>
+              <input id="checkbox" type="checkbox" name="toy-type" value="puppets">
+            </div>
+
+            <div>
+              <label for="toy-type">Games</label>
+              <input id="checkbox" type="checkbox" name="toy-type" value="games">
+            </div>
+
+            <div>
+              <label for="toy-type">Hard Toys</label>
+              <input id="checkbox" type="checkbox" name="toy-type" value="hard">
+            </div>
+
+            <a id="type-filter-button" class="button">Filter Toy Types<i class="bi bi-arrow-right-circle"></i></a>
+
+          </form>
+        </div>
+      </div> -->
+      <div id="notifications">
+      </div>
+    </div>
+
+    <div id="result"></div>
+    <div id="modal-overlay">
+      <div id="modal-content">
+        <i id="close-button" class="close-btn bi bi-x-circle"></i>
+        <div id="result-2"></div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="footer-links-container">
+        <div class="about-links">
+          <p>About Toytopia</p>
+          <ul>
+            <li>About Us</li>
+            <li>Privacy Policy</li>
+            <li>Terms & Conditions</li>
+            <li>Stores</li>
+          </ul>
+        </div>
+        <div class="brands-links">
+          <p>Popular Brands</p>
+          <ul>
+            <li>Antics</li>
+            <li>Hasbro</li>
+            <li>Fur Real</li>
+          </ul>
+        </div>
+        <div class="extra-links">
+          <p>Customer Care</p>
+          <ul>
+            <li>Contact Us</li>
+            <li>FAQ</li>
+            <li>Pricing</li>
+            <li>Click and Collect</li>
+          </ul>
+        </div>
+        <div class="extra-links">
+          <p>Join Toytopia</p>
+          <ul>
+            <li>Employment</li>
+            <li>News</li>
+            <li>Mailing List</li>
+          </ul>
+        </div>
+      </div>
+      <p id="copyright">Copyright 2022 Toytopia</p>
+    </footer>
+
+  <script src="js/script.js"></script>
+  </body>
+</html>
